@@ -164,6 +164,14 @@ public class BatalhaPVPService {
                 System.out.println("8. Geodude (Pedra)");
                 System.out.println("9. Gastly (Fantasma)");
                 System.out.println("10. Jigglypuff (Normal)");
+                System.out.println("11. Snorlax (Normal)");
+                System.out.println("12. Gengar (Fantasma)");
+                System.out.println("13. Arcanine (Fogo)");
+                System.out.println("14. Gyarados (Água)");
+                System.out.println("15. Alakazam (Psíquico)");
+                System.out.println("16. Lapras (Água)");
+                System.out.println("17. Dragonite (Dragão)");
+                System.out.println("18. Electabuzz (Elétrico)");
                 System.out.print("Digite o número (Nível 5): ");
 
                 int escolha = scanner.nextInt();
@@ -180,6 +188,14 @@ public class BatalhaPVPService {
                     case 8 -> new Geodude(5);
                     case 9 -> new Gastly(5);
                     case 10 -> new Jigglypuff(5);
+                    case 11 -> new Snorlax(5);
+                    case 12 -> new Gengar(5);
+                    case 13 -> new Arcanine(5);
+                    case 14 -> new Gyarados(5);
+                    case 15 -> new Alakazam(5);
+                    case 16 -> new Lapras(5);
+                    case 17 -> new Dragonite(5);
+                    case 18 -> new Electabuzz(5);
                     default -> new Eevee(5);
                 };
 
