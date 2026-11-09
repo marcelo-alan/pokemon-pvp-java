@@ -59,6 +59,7 @@ public class Movimento {
     public int getPoder() { return poder; }
     public boolean isEhEspecial() { return ehEspecial; }
     public int getCooldownAtual() { return cooldownAtual; }
+    public int getCooldownMaximo() { return cooldownMaximo; }
     public boolean isAplicaEfeito() { return aplicaEfeito; }
     public String getNomeEfeito() { return nomeEfeito; }
     public double getChanceEfeito() { return chanceEfeito; }

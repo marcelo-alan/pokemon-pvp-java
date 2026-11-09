@@ -1,0 +1,43 @@
+POKÉMON PVP - VERSÃO COM INTERFACE GRÁFICA (Java Swing)
+=========================================================
+
+COMO EXECUTAR
+  Interface gráfica:  rode a classe  org.example.MainGUI
+  Versão de console:  rode a classe  org.example.Main   (continua funcionando como antes)
+
+  No IntelliJ: abra o projeto como Maven, clique com o botão direito em MainGUI.java > Run.
+  Se os sprites não aparecerem, recarregue o Maven (Reload All Maven Projects) ou marque a pasta
+  src/main/resources como "Resources Root".
+
+COMO JOGAR
+  1. Digite o nome dos dois treinadores.
+  2. Cada treinador escolhe 3 Pokémon (passe o mouse para ver status e golpes).
+  3. Na batalha: LUTAR (escolher golpe) ou POKÉMON (trocar). Enter/Espaço/clique aceleram os textos.
+  4. Golpes especiais ficam em recarga por alguns turnos (botão desabilitado com a contagem).
+  5. Um Pokémon que acabou de entrar em campo não pode ser trocado no turno seguinte.
+  6. Vence quem derrubar os 3 Pokémon do adversário.
+
+O QUE FOI ADICIONADO AO PROJETO
+  gui/JanelaJogo.java      janela principal, guarda os dados da partida e troca de tela
+  gui/TelaInicio.java      abertura e nomes dos treinadores
+  gui/TelaSelecao.java     escolha dos 3 Pokémon
+  gui/TelaPassagem.java    "passe o computador" (um treinador não vê a escolha do outro)
+  gui/TelaBatalha.java     campo de batalha, menus, animações e turnos
+  gui/TelaFim.java         tela de vitória, revanche e novo jogo
+  gui/Estilo.java          cores, fontes e desenhos reutilizáveis
+  gui/Sprites.java         carrega e anima os sprites (resources/sprites)
+  gui/BotaoPoke.java       botão customizado
+  service/CatalogoPokemon  lista dos 18 Pokémon
+  service/ResultadoAtaque  dados de um ataque (dano, eficácia, STAB, efeito)
+  MainGUI.java             ponto de entrada da interface gráfica
+
+  Alterações em arquivos existentes (pequenas):
+  - BatalhaService: novo método calcularAtaque(), que devolve um ResultadoAtaque;
+    executarAtaque() (console) usa o novo método e imprime as mesmas mensagens de antes.
+  - Movimento: novo getter getCooldownMaximo().
+
+OBSERVAÇÕES
+  - Os sprites dos Pokémon são do repositório público PokeAPI/sprites (arte da Nintendo/Game Freak),
+    usados aqui apenas para fins educacionais.
+  - Os efeitos de status (Paralisado, Dormindo etc.) aparecem na tela como etiquetas, mas, como na versão
+    de console, ainda não alteram o combate.
